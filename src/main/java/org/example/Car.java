@@ -8,11 +8,10 @@ import java.text.DecimalFormat;
 public class Car extends Vehicle implements IRentable{
     private int seatCount;
     private boolean hasGear;
-    private double price;
     private  boolean available;
 
-    public Car(String brand, String model, int seatCount, boolean hasGear, double price, boolean available) {
-        super(brand, model);
+    public Car(String brand, String model, double price, int seatCount, boolean hasGear, boolean available) {
+        super(brand, model, price);
         if (seatCount < 0) {
             throw new SeatException("NOT ALLOWED!");
         }
@@ -21,7 +20,6 @@ public class Car extends Vehicle implements IRentable{
         }
         this.seatCount = seatCount;
         this.hasGear = hasGear;
-        this.price = price;
         this.available = available;
     }
 
@@ -44,17 +42,6 @@ public class Car extends Vehicle implements IRentable{
         this.hasGear = hasGear;
     }
 
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        if (price < 0) {
-            throw new PriceException("NOT ALLOWED !");
-        }
-        this.price = price;
-    }
-
     @Override
     public void getRentalPrice() {
         double price = getPrice() * 0.1;
@@ -69,6 +56,6 @@ public class Car extends Vehicle implements IRentable{
 
     @Override
     public void displayInfo() {
-        System.out.println("Brand : " + getBrand() + "\nModel: " + getModel() +"\nPrice: $" + price + "\nSeat: " + seatCount + "\nGear : " + hasGear + "\nRental Available: " + isAvailable());
+        System.out.println("Brand : " + getBrand() + "\nModel: " + getModel() +"\nPrice: $" + getPrice() + "\nSeat: " + seatCount + "\nGear : " + hasGear + "\nRental Available: " + isAvailable());
     }
 }

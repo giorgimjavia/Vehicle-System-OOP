@@ -2,8 +2,8 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        Car audi = new Car("Audi", "A4", 4, true, 5500, true);
-        Bike bmw = new Bike("BMW", "F900", 2, false, 2300, true);
+        Car audi = new Car("Audi", "A4", 5500, 4, true, true);
+        Bike bmw = new Bike("BMW", "F900", 1500, 2, false, true);
 
         audi.displayInfo();
         audi.getRentalPrice();
