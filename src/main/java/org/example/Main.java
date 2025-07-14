@@ -12,6 +12,7 @@ public class Main {
         bmw.displayInfo();
         bmw.getRentalPrice();
         bmw.isAvailable();
-        System.out.println("Vehicle Rental");
+        System.out.println("Vehicle Rental Project");
+        System.out.println("OOP");
     }
 }
