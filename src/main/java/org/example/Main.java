@@ -12,7 +12,5 @@ public class Main {
         bmw.displayInfo();
         bmw.getRentalPrice();
         bmw.isAvailable();
-
-        System.out.println("OOP");
     }
 }
