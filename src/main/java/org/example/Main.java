@@ -17,6 +17,5 @@ public class Main {
         bmw.getRentalPrice();
         bmw.isAvailable();
 
-        List<Field> field = new ArrayList<>();
     }
 }
