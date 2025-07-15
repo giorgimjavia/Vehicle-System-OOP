@@ -1,5 +1,6 @@
 package org.example;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +17,6 @@ public class Main {
         bmw.getRentalPrice();
         bmw.isAvailable();
 
-        List<String> field = new ArrayList<>();
+        List<Field> field = new ArrayList<>();
     }
 }
