@@ -1,5 +1,8 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         Car audi = new Car("Audi", "A4", 5500, 4, true, true);
@@ -12,5 +15,7 @@ public class Main {
         bmw.displayInfo();
         bmw.getRentalPrice();
         bmw.isAvailable();
+
+        List<String> field = new ArrayList<>();
     }
 }
